@@ -1,0 +1,36 @@
+---
+// src/components/Certifications.astro
+
+const certifications = [
+  {
+    title: 'Advanced Secure DevOps with Kubernetes',
+    issuer: 'SecureFlag',
+    date: 'Issued Jul 2025 · Expires Jul 2026',
+    credentialId: 'f25a16c2-c0b9-48e9-9700-3b32de22139d',
+    // In a real scenario, you might link to a verification page.
+    // For now, we'll just display the info.
+  },
+  {
+    title: 'OWASP Top 10:2021 in Python',
+    issuer: 'SecureFlag',
+    date: 'Issued Jul 2025 · Expires Jul 2026',
+    credentialId: '4160beaf-9463-4a4c-a6f7-15e75dbfc2e9',
+  }
+];
+---
+
+<section class="max-w-3xl mx-auto py-12 md:py-16 px-6">
+  <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 border-l-4 border-cyan-400 pl-4">
+    Licenses & Certifications
+  </h2>
+  <div class="space-y-6">
+    {certifications.map(cert => (
+      <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700/50">
+        <h3 class="text-lg font-semibold text-white">{cert.title}</h3>
+        <p class="text-md font-medium text-cyan-400">{cert.issuer}</p>
+        <p class="text-sm text-gray-400 mt-2">{cert.date}</p>
+        <p class="text-xs text-gray-500 mt-1">Credential ID: {cert.credentialId}</p>
+      </div>
+    ))}
+  </div>
+</section>
