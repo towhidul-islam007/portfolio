@@ -1,0 +1,40 @@
+---
+// src/components/Skills.astro
+
+const skills = [
+  {
+    category: 'Programming Languages & Frameworks',
+    items: 'Python, SQL, Shell Scripting, C, C++, Java, C#, FastAPI',
+  },
+  {
+    category: 'Data Engineering & Data Science',
+    items: 'BigQuery, Apache Airflow, dbt, ETL processes, Data warehousing solutions, Data pipeline development, Data architecture, Data science techniques, LangGraph, LangChain, Haystack, Vertex AI, OpenAI, ChromaDB, SpaCy, NLTK',
+  },
+  {
+    category: 'Cloud Data Solutions & Infrastructure',
+    items: 'Google Cloud Platform, Microsoft Azure, Amazon Web Services, Cloud data solutions, Kubernetes, Docker, Terraform, Helm, Keda, nginx, Scalable deployments',
+  },
+  {
+    category: 'Tools & Databases',
+    items: 'GitHub Actions, Bitbucket Pipelines, Azure SQL Server, DynamoDB, Redis, Streamlit',
+  },
+];
+---
+
+<section class="max-w-5xl mx-auto py-12 md:py-16 px-6">
+  <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
+    Technical Skills
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {skills.map(skillCategory => (
+      <div class="bg-gray-800/50 p-6 rounded-lg border border-gray-700/50 shadow-lg hover:shadow-cyan-500/10 transition-shadow duration-300">
+        <h3 class="text-lg font-semibold text-cyan-400 mb-3">
+          {skillCategory.category}
+        </h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          {skillCategory.items}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
