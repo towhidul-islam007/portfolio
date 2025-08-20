@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Towhidul Islam - Resume</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.3;
+        color: #2d3748;
+        background: #f7fafc;
+        padding: 10px;
+        font-size: 13px;
+      }
+
+      .resume-container {
+        max-width: 8.5in;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .header {
+        background: white;
+        color: #2d3748;
+        padding: 20px 25px 15px;
+        text-align: center;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 4px;
+        letter-spacing: -0.5px;
+        color: #2d3748;
+      }
+
+      .title {
+        font-size: 0.95rem;
+        font-weight: 400;
+        margin-bottom: 12px;
+        color: #4a5568;
+      }
+
+      .contact-info {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        color: #4a5568;
+      }
+
+      .main-content {
+        padding: 20px 25px;
+      }
+
+      .section {
+        margin-bottom: 16px;
+      }
+
+      .section:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 10px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .summary {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        color: #4a5568;
+      }
+
+      .skills-list {
+        display: block;
+      }
+
+      .skill-category {
+        background: white;
+        padding: 8px 0;
+        border: none;
+        margin-bottom: 8px;
+      }
+
+      .skill-category h4 {
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 6px;
+        font-size: 0.8rem;
+      }
+
+      .skill-items {
+        font-size: 0.75rem;
+        color: #4a5568;
+        line-height: 1.4;
+      }
+
+      .experience-item {
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .experience-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .job-header {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .job-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #2d3748;
+        line-height: 1.2;
+      }
+
+      .company {
+        font-size: 0.85rem;
+        color: #2d3748;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .duration {
+        font-size: 0.7rem;
+        color: #4a5568;
+        font-weight: 500;
+        display: inline-block;
+        margin-left: auto;
+      }
+
+      .achievements {
+        list-style: none;
+      }
+
+      .achievements li {
+        margin-bottom: 4px;
+        padding-left: 8px;
+        position: relative;
+        font-size: 0.75rem;
+        line-height: 1.3;
+        color: #4a5568;
+      }
+
+      .achievements li::before {
+        content: "• ";
+        position: absolute;
+        left: 0;
+        color: #2d3748;
+        font-size: 0.75rem;
+        top: 0;
+      }
+
+      .education,
+      .awards {
+        background: white;
+        padding: 10px 0;
+        border: none;
+      }
+
+      .education-item,
+      .award-item {
+        margin-bottom: 8px;
+      }
+
+      .education-item:last-child,
+      .award-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .degree {
+        font-weight: 600;
+        color: #2d3748;
+        font-size: 0.8rem;
+      }
+
+      .university {
+        color: #2d3748;
+        font-weight: 500;
+        font-size: 0.75rem;
+      }
+
+      .year {
+        color: #718096;
+        font-size: 0.7rem;
+      }
+
+      .award-title {
+        font-weight: 600;
+        color: #2d3748;
+        font-size: 0.75rem;
+      }
+
+      .award-detail {
+        color: #4a5568;
+        font-size: 0.7rem;
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+          font-size: 13px;
+        }
+
+        .resume-container {
+          box-shadow: none;
+          border-radius: 0;
+          max-width: 100%;
+        }
+
+        .header {
+          background: white !important;
+          color: #2d3748 !important;
+          padding: 20px 25px 15px;
+          border-bottom: 1px solid #e2e8f0;
+        }
+
+        .main-content {
+          padding: 20px 25px;
+        }
+
+        .section {
+          margin-bottom: 16px;
+        }
+
+        .experience-item {
+          margin-bottom: 14px;
+          padding-bottom: 12px;
+        }
+
+        .skills-list {
+          display: block;
+        }
+
+        .skill-category {
+          padding: 10px;
+        }
+
+        .achievements li {
+          font-size: 0.8rem;
+          margin-bottom: 4px;
+          line-height: 1.3;
+        }
+
+        .name {
+          font-size: 1.8rem;
+        }
+
+        .title {
+          font-size: 0.9rem;
+        }
+
+        .contact-info {
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .main-content {
+          padding: 30px 25px;
+        }
+
+        .header {
+          padding: 30px 25px 25px;
+        }
+
+        .contact-info {
+          font-size: 0.75rem;
+          line-height: 1.4;
+        }
+
+        .name {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container">
+      <header class="header">
+        <h1 class="name">Towhidul Islam</h1>
+        <p class="title">Data Platform Engineer</p>
+        <div class="contact-info">
+          im.towhidul@gmail.com | +8801616833344<br />
+          linkedin.com/in/towhidul-islam | github.com/towhidul-islam007 | towhidislam.vercel.app
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="section">
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="summary">
+            Data Engineer/Staff Software Engineer with 7+ years of expertise in
+            data warehousing solutions, cloud data solutions, and ETL processes.
+            Proven track record in data pipeline development, data architecture
+            design, rapid prototyping, and backend development. Expert in
+            building scalable data engineering platforms across GCP, Azure, and
+            AWS with proficiency in Python, Apache Airflow, BigQuery, and
+            Kubernetes for scalable deployments.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills-list">
+            <div class="skill-category">
+              <h4>Programming Languages & Frameworks</h4>
+              <div class="skill-items">
+                Python, SQL, Shell Scripting, C, C++, Java, C#, FastAPI
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Data Engineering & Data Science</h4>
+              <div class="skill-items">
+                BigQuery, Apache Airflow, dbt, ETL processes, Data warehousing
+                solutions, Data pipeline development, Data architecture, Data
+                science techniques, LangGraph, LangChain, Haystack, Vertex AI,
+                OpenAI, ChromaDB, SpaCy, NLTK
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Cloud Data Solutions & Infrastructure</h4>
+              <div class="skill-items">
+                Google Cloud Platform, Microsoft Azure, Amazon Web Services,
+                Cloud data solutions, Kubernetes, Docker, Terraform, Helm, Keda,
+                nginx, Scalable deployments
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Tools & Databases</h4>
+              <div class="skill-items">
+                GitHub Actions, Bitbucket Pipelines, Azure SQL Server, DynamoDB,
+                Redis, Streamlit
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Professional Experience</h2>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-title">Staff Software Engineer</div>
+              <span style="color: #4a5568">at</span>
+              <div class="company">Cefalo Bangladesh Ltd</div>
+              <div class="duration">Jan 2025 - Present</div>
+            </div>
+            <ul class="achievements">
+              <li>
+                Spearheading DN Media Group's data platform modernization from
+                Azure to GCP, successfully migrating 1TB+ data to BigQuery with
+                100% data integrity and zero downtime
+              </li>
+              <li>
+                Architected CI/CD workflows for dbt with incremental builds,
+                reducing deployment time by 60% and eliminating manual
+                interventions while improving data platform reliability through
+                automated testing
+              </li>
+              <li>
+                Automated dbt backfill workflows using GitHub Actions and
+                dynamic DAG creation, replacing manual CLI processes with
+                self-service GitHub issue requests, reducing operational
+                overhead by 85%
+              </li>
+              <li>
+                Designed Infrastructure as Code using Terraform and Helm for
+                scalable deployments across 5+ Kubernetes environments,
+                improving deployment consistency by 95%
+              </li>
+              <li>
+                Leading development of enterprise RAG solutions using LangGraph,
+                LangChain, and Gemini, reducing external AI service dependencies
+                and saving $5,000+ monthly in licensing costs
+              </li>
+              <li>
+                Developed an AI-powered transcription platform for journalists
+                using OpenAI Whisper, automating transcription workflows and
+                reducing processing time from 4 hours of manual work to under 5
+                minutes
+              </li>
+              <li>
+                Authored comprehensive API documentation and operational
+                runbooks for 10+ services, improving team onboarding time by 50%
+              </li>
+              <li>
+                Led knowledge-sharing sessions with 25+ team members on cloud
+                data solutions and data architecture best practices
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-title">Senior Software Engineer</div>
+              <span style="color: #4a5568">at</span>
+              <div class="company">Cefalo Bangladesh Ltd</div>
+              <div class="duration">Feb 2021 - Jan 2025</div>
+            </div>
+            <ul class="achievements">
+              <li>
+                Designed and deployed 100+ data pipeline development solutions
+                using Python, Docker, and Airflow KubernetesPodOperator,
+                processing 100GB+ daily data volume
+              </li>
+              <li>
+                Migrated Airflow from LocalExecutor to CeleryExecutor, scaling
+                infrastructure to support 100+ concurrent DAGs with 99.8% uptime
+                (improved from 80%)
+              </li>
+              <li>
+                Developed real-time data ingestion systems using Azure Functions
+                and EventHub, reducing data latency by 99% (from 4 hours to 2
+                minutes)
+              </li>
+              <li>
+                Created NLP-based article recommendation engine with Spacy,
+                Redis caching, and ChromaDB, improving user engagement by 25%
+                and click-through rates by 18%
+              </li>
+              <li>
+                Built a suite of AI-powered content tools using Streamlit and
+                AKS, including automated summarization APIs, article title
+                generation, and specialized chatbots, reducing manual content
+                creation time by 2.5 hours daily
+              </li>
+              <li>
+                Built comprehensive CI/CD pipelines with GitHub Actions,
+                integrating automated testing, and reducing deployment errors by
+                90%
+              </li>
+              <li>
+                Developed and maintained 5+ shared Python packages, reducing
+                code duplication by 60% across an 8-person development team
+              </li>
+              <li>
+                Optimized ETL processes, reducing data processing time by 45% and
+                improving data quality scores by 30%
+              </li>
+              <li>
+                Created technical documentation for data architecture serving as a
+                reference for 25+ stakeholders
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-title">
+                Software Engineer (Backend Development)
+              </div>
+              <span style="color: #4a5568">at</span>
+              <div class="company">Workd.ai</div>
+              <div class="duration">Dec 2018 - Feb 2021</div>
+            </div>
+            <ul class="achievements">
+              <li>
+                Developed scalable backend architecture with 5+ microservices
+                using Python Falcon framework supporting 50,000+ user profiles
+                and 1,000+ job listings while serving 10,000+ concurrent users
+                with 99% uptime
+              </li>
+              <li>
+                Automated AWS ECS scalable deployments via Bitbucket Pipelines,
+                Docker, and ECR, reducing deployment time by 90% (from 30
+                minutes to 3 minutes)
+              </li>
+              <li>
+                Built AWS DynamoDB-based data storage solutions with Redis
+                caching, achieving sub-100ms query response times (85%
+                improvement)
+              </li>
+              <li>
+                Implemented NLP-powered candidate-job matching algorithms using
+                data science techniques, improving match accuracy by 40%
+              </li>
+              <li>
+                Created notification and email delivery systems using AWS SES,
+                SNS, and SQS, handling 100K+ daily messages with a 99.9% delivery
+                rate
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-title">Software Engineer</div>
+              <span style="color: #4a5568">at</span>
+              <div class="company">Enosis Solutions</div>
+              <div class="duration">Feb 2017 - Sep 2017</div>
+            </div>
+            <ul class="achievements">
+              <li>
+                Built enterprise .NET WinForms and MVC applications in C# with
+                Entity Framework for healthcare systems
+              </li>
+              <li>
+                Developed complex backend development logic using Azure SQL
+                Server stored procedures, optimizing database queries
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="education">
+            <div class="education-item">
+              <div class="degree">
+                Bachelor of Science in Computer Science & Engineering
+              </div>
+              <div class="university">University of Dhaka</div>
+              <div class="year">2013 - 2017</div>
+              <p style="margin-top: 6px; color: #4a5568; font-size: 0.8rem">
+                Strong foundation in algorithms, data structures, data science,
+                and software engineering principles. Represented the university in
+                ACM ICPC Regional Competitions.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Honors & Awards</h2>
+          <div class="awards">
+            <div class="award-item">
+              <div class="award-title">
+                ACM ICPC Dhaka Regional - 14th Place
+              </div>
+              <div class="award-detail">
+                2015 • International Collegiate Programming Contest
+              </div>
+            </div>
+            <div class="award-item">
+              <div class="award-title">
+                Bangladesh National Math Olympiad - Regional Champion
+              </div>
+              <div class="award-detail">
+                2010 • National Mathematics Competition
+              </div>
+            </div>
+            <div class="award-item">
+              <div class="award-title">Competitive Programming Achievement</div>
+              <div class="award-detail">Codeforces Max Rating: 1850</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
