@@ -7,6 +7,7 @@ const experiences = [
     title: 'Staff Software Engineer',
     company: 'Cefalo Bangladesh Ltd',
     duration: 'Jan 2025 - Present',
+    logoUrl: '/cefalo.svg',
     achievements: [
       "Spearheading DN Media Group's data platform modernization from Azure to GCP, successfully migrating 1TB+ data to BigQuery with 100% data integrity and zero downtime",
       "Architected CI/CD workflows for dbt with incremental builds, reducing deployment time by 60% and eliminating manual interventions while improving data platform reliability through automated testing",
@@ -20,6 +21,7 @@ const experiences = [
     title: 'Senior Software Engineer',
     company: 'Cefalo Bangladesh Ltd',
     duration: 'Feb 2021 - Jan 2025',
+    logoUrl: '/cefalo.svg',
     achievements: [
       "Designed and deployed 100+ data pipeline development solutions using Python, Docker, and Airflow KubernetesPodOperator, processing 100GB+ daily data volume",
       "Migrated Airflow from LocalExecutor to CeleryExecutor, scaling infrastructure to support 100+ concurrent DAGs with 99.8% uptime (improved from 80%)",
@@ -32,6 +34,7 @@ const experiences = [
     title: 'Software Engineer (Backend Development)',
     company: 'Workd.ai',
     duration: 'Dec 2018 - Feb 2021',
+    logoUrl: '/workd.ico',
     achievements: [
       "Developed scalable backend architecture with 5+ microservices using Python Falcon framework supporting 50,000+ user profiles and 1,000+ job listings while serving 10,000+ concurrent users with 99% uptime",
       "Automated AWS ECS scalable deployments via Bitbucket Pipelines, Docker, and ECR, reducing deployment time by 90% (from 30 minutes to 3 minutes)",
@@ -43,6 +46,7 @@ const experiences = [
     title: 'Software Engineer',
     company: 'Enosis Solutions',
     duration: 'Feb 2017 - Sep 2017',
+    logoUrl: '/enosis.png',
     achievements: [
       "Built enterprise .NET WinForms and MVC applications in C# with Entity Framework for healthcare systems",
       "Developed complex backend development logic using Azure SQL Server stored procedures, optimizing database queries",
@@ -62,6 +66,7 @@ const experiences = [
         company={exp.company}
         duration={exp.duration}
         achievements={exp.achievements}
+        logoUrl={exp.logoUrl}
       />
     ))}
   </div>
