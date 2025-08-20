@@ -1,0 +1,31 @@
+---
+// src/components/Awards.astro
+
+const awards = [
+    {
+        title: "ACM ICPC Dhaka Regional - 14th Place",
+        detail: "2015 • International Collegiate Programming Contest"
+    },
+    {
+        title: "Bangladesh National Math Olympiad - Regional Champion",
+        detail: "2010 • National Mathematics Competition"
+    },
+    {
+        title: "Competitive Programming Achievement",
+        detail: "Codeforces Max Rating: 1850"
+    }
+]
+---
+<section class="max-w-3xl mx-auto py-12 md:py-16 px-6">
+  <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 border-l-4 border-cyan-400 pl-4">
+    Honors & Awards
+  </h2>
+  <div class="space-y-4">
+    {awards.map(award => (
+      <div class="bg-gray-800/30 p-4 rounded-md">
+        <h3 class="font-semibold text-white">{award.title}</h3>
+        <p class="text-sm text-gray-400">{award.detail}</p>
+      </div>
+    ))}
+  </div>
+</section>

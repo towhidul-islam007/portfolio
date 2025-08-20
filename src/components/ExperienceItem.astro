@@ -1,0 +1,37 @@
+---
+// src/components/ExperienceItem.astro
+interface Props {
+  title: string;
+  company: string;
+  duration: string;
+  achievements: string[];
+}
+
+const { title, company, duration, achievements } = Astro.props;
+---
+
+<div class="relative pl-8 md:pl-12 py-4 group">
+  <!-- Timeline vertical line -->
+  <div class="absolute left-2.5 md:left-4 top-0 h-full w-0.5 bg-gray-700"></div>
+
+  <!-- Timeline circle -->
+  <div class="absolute left-0 md:left-1.5 top-6 w-5 h-5 bg-gray-800 border-2 border-cyan-400 rounded-full transition-transform duration-300 group-hover:scale-125"></div>
+
+  <div class="mb-2">
+    <h3 class="text-lg font-semibold text-white">{title}</h3>
+    <div class="flex flex-col md:flex-row md:items-center md:gap-4 text-sm text-gray-400">
+      <p class="font-medium text-cyan-400">{company}</p>
+      <span class="hidden md:block">|</span>
+      <p>{duration}</p>
+    </div>
+  </div>
+
+  <ul class="list-none space-y-2 mt-4">
+    {achievements.map((achievement) => (
+      <li class="relative pl-5 text-sm text-gray-300 leading-relaxed">
+        <span class="absolute left-0 top-1.5 w-1.5 h-1.5 bg-cyan-400 rounded-full"></span>
+        {achievement}
+      </li>
+    ))}
+  </ul>
+</div>
